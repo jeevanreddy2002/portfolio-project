@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JEEVAN REDDY ARLAGADDA - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #282c34;
+            color: #ffffff;
+        }
+        nav {
+            background-color: #1f1f1f;
+            border-bottom: 2px solid #ff5722;
+        }
+        main {
+            padding: 2rem 0;
+        }
+        .container-box {
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .tile {
+            background-color: #444;
+            color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tile:hover {
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.5);
+        }
+        h2, h3 {
+            color: #ff5722;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .icon {
+            margin-right: 0.5rem;
+            color: #ff5722;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>JEEVAN REDDY ARLAGADDA</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#techstack">Tech Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+        </ul>
+    </nav>
 
+    <main class="container">
+        <div id="about" class="container-box">
+            <h2><i class="fas fa-user icon"></i>About Me</h2>
+            <div class="grid">
+                <div class="tile">
+                    <h3>Summary</h3>
+                    <p>
+                        Experienced Python Developer with 4.5 years of expertise in backend development and machine
+                        learning, focusing on building scalable, high-performance systems.
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Master of Science, Computer Science and Engineering, University of Florida, USA</li>
+                        <li>Bachelor of Technology, Artificial Intelligence, Amity University, India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="techstack" class="container-box">
+            <h2><i class="fas fa-tools icon"></i>Tech Stack</h2>
+            <div class="grid">
+                <div class="tile">Python</div>
+                <div class="tile">C/C++</div>
+                <div class="tile">MySQL</div>
+                <div class="tile">PostgreSQL</div>
+                <div class="tile">Django</div>
+                <div class="tile">Flask</div>
+                <div class="tile">TensorFlow</div>
+                <div class="tile">PyTorch</div>
+                <div class="tile">Pandas</div>
+                <div class="tile">NumPy</div>
+                <div class="tile">AWS</div>
+                <div class="tile">Google Cloud</div>
+                <div class="tile">RESTful APIs</div>
+                <div class="tile">Jupyter Notebook</div>
+            </div>
+        </div>
+
+        <div id="projects" class="container-box">
+            <h2><i class="fas fa-folder icon"></i>Projects</h2>
+            <div class="grid">
+                <div class="tile">
+                    <h3>Dynamic Pricing Engine</h3>
+                    <p>
+                        Developed an AI-driven pricing engine for e-commerce platforms using Scikit-learn and XGBoost.
+                        Integrated reinforcement learning for real-time pricing adjustments.
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Employee Productivity Tracker</h3>
+                    <p>
+                        Built a backend system to analyze employee performance in real-time using FastAPI, PostgreSQL,
+                        and Redis. Automated sentiment analysis workflows with SpaCy.
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Multi-Tenant SaaS Platform</h3>
+                    <p>
+                        Designed a multi-tenant SaaS platform with FastAPI and PostgreSQL, leveraging Kubernetes for
+                        scalability and fault tolerance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="container-box">
+            <h2><i class="fas fa-envelope icon"></i>Contact Me</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="container">
+        <small>
+            <a href="mailto:jeevanr.arlagadda@gmail.com">Email</a> • 
+            <a href="https://www.linkedin.com/in/arlagadda-jeevan-reddy/" target="_blank">LinkedIn</a>
+        </small>
+    </footer>
+</body>
+</html>
