@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to My Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff5722;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .loading-bar {
+            width: 300px;
+            height: 10px;
+            background: #333;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .loading-fill {
+            width: 0;
+            height: 100%;
+            background: #ff5722;
+            position: absolute;
+        }
+        @keyframes loading {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        .keyboard-key {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: 2px solid #00ffcc;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 10px rgba(0, 255, 204, 0.5);
+            color: #00ffcc;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+        .keyboard-key:active {
+            transform: scale(0.9);
+            animation: keypress-effect 0.3s ease forwards;
+        }
+        @keyframes keypress-effect {
+            0% { background-color: #1f1f1f; color: #00ffcc; }
+            50% { background-color: #00ffcc; color: #1f1f1f; }
+            100% { background-color: #1f1f1f; color: #00ffcc; }
+        }
+    </style>
+    <script>
+        function redirectToPortfolio() {
+            const loadingBar = document.querySelector('.loading-fill');
+
+            // Trigger loading animation
+            loadingBar.style.animation = 'loading 2s forwards';
+
+            // Redirect after animation
+            setTimeout(() => {
+                window.location.href = '/portfolio'; // Adjust if needed, Flask route is "/portfolio"
+            }, 2000); // Match animation duration
+        }
+    </script>
+</head>
+<body>
+    <h1><i class="fas fa-laptop-code"></i> Welcome to My Portfolio</h1>
+    <p>Hi, I'm JEEVAN REDDY ARLAGADDA - Python Developer | ML Engineer | Backend Specialist</p>
+    <div class="loading-bar">
+        <div class="loading-fill"></div>
+    </div>
+    <br>
+    <button class="keyboard-key" onclick="redirectToPortfolio()">Enter</button>
+</body>
+</html>
